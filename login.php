@@ -2,7 +2,7 @@
 require 'includes/session.php';
 
 if ($logged_in) {   
-  header('Location: profile.php'); 
+  header('Location: index.php'); 
   exit;
 }    
 
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($user) {
     login($username);                               
-    header('Location: profile.php');
+    header('Location: index.php');
     exit;   
   } else {
     $login_err = "Invalid username or password";
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div>
       <ul>
-        <li><?= $logged_in ? '<a href="logout.php">Log Out</a>' : '<a href="login.php">Log In</a>'; ?></li>
+        <li><?= $logged_in ? '<a href="logout.php">Log Out</a>' : '<a href="index.php">Log In</a>'; ?></li>
       </ul>
     </div>
   </header>
