@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($user) {
     login($username);                               
     header('Location: index.php');
+    print "<script>window.location = 'index.php'</script>";
     exit;   
   } else {
     $login_err = "Invalid username or password";
