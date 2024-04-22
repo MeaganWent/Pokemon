@@ -1,6 +1,6 @@
 <?php
 	session_start();										 // Start/renew session
-  require 'database-connection.php';
+  require 'includes/database-connection.php';
 
 	$logged_in = $_SESSION['logged_in'] ?? false; 		    // Is user logged in?
 
