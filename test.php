@@ -1,5 +1,5 @@
 <?php   										// Opening PHP tag
-	
+	session_start();
  	// Include the database connection script
  	require 'includes/database-connection.php';
 	 require 'includes/session.php';
