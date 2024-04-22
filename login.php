@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $password = $_POST['password'];
 
   $user = authenticate($pdo, $username, $password);
+  var_dump($user);
 
   if ($user) {
     login($username);                               
