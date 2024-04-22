@@ -32,17 +32,13 @@
     <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Cosmic Horoscopes</title>
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
 
     <header>
-      <div class="header-left">
-        <div class="logo">
-          <img src="imgs/logo.png" alt="URI Cosmic Horoscopes Logo">
+      <div>
+        <div>
             </div>
 
             <nav>
@@ -52,14 +48,14 @@
           </nav>
         </div>
 
-        <div class="header-right">
+        <div>
           <ul>
             <li><?= $logged_in ? '<a href="logout.php">Log Out</a>' : '<a href="login.php">Log In</a>'; ?></li>
           </ul>
         </div>
     </header>
 
-    <div id="content" class="animate-bottom">
+    <div>
       <h1>Log In</h1>
       <hr />
       <br />
