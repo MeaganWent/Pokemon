@@ -2,7 +2,7 @@
 require 'includes/session.php';
 
 if ($logged_in) {   
-  header('Location: index.php'); 
+  header('Location: profile.php'); 
   exit;
 }    
 
