@@ -23,6 +23,7 @@
 
 if ($logged_in) {   
   header('Location: index.php'); 
+  print "<script>window.location = 'index.php'</script>";
   exit;
 }    
 
