@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($user) {
     login($username);                               
-    header('Location: index.php');
+    header('Location: profile.php');
     exit;   
   } else {
     $login_err = "Invalid username or password";
