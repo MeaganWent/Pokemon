@@ -10,7 +10,7 @@
 
 	function login($username)          					  // Remember user passed login
 	{
-    	session_regenerate_id(true); 					 // Update session id
+    	// session_regenerate_id(true); 					 // Update session id
 	    $_SESSION['logged_in'] = true; 					// Set logged_in key to true
 	    $_SESSION['username'] = $username;		       // Set username key to one from form 
 	}
