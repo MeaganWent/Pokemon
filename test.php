@@ -2,8 +2,12 @@
 	
  	// Include the database connection script
  	require 'includes/database-connection.php';
+	 require 'includes/session.php';
+
 	 $_SESSION['logged_in'] = true; 					// Set logged_in key to true
 	 $_SESSION['username'] = "bob";		
+
+	 var_dump($_SESSION);
 
 // 	/*
 // 	 * Retrieve toy information from the database based on the toy ID.
