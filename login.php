@@ -1,5 +1,25 @@
 <?php
-require 'includes/session.php';
+	session_start();										 // Start/renew session
+  require 'database-connection.php';
+
+	$logged_in = $_SESSION['logged_in'] ?? false; 		    // Is user logged in?
+
+	function login($username)          					  // Remember user passed login
+	{
+    	// session_regenerate_id(true); 					 // Update session id
+	    $_SESSION['logged_in'] = true; 					// Set logged_in key to true
+	    $_SESSION['username'] = $username;		       // Set username key to one from form 
+	}
+
+	function authenticate($pdo, $username, $password) {
+	    $sql = "SELECT username, password
+	            FROM login_info
+	            WHERE username = :username AND password = :password";
+
+	    $user = pdo($pdo, $sql, ['username' => $username, 'password' => $password])->fetch();
+
+	    return $user;
+  	}
 
 if ($logged_in) {   
   header('Location: index.php'); 
@@ -11,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $password = $_POST['password'];
 
   $user = authenticate($pdo, $username, $password);
-  var_dump($user);
 
   if ($user) {
     login($username);                               
